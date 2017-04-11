@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+  <td><%= @task.user.email %></td>
+  <td><%= @task.charge.email %></td>
+ 
+
+<p>
+  <strong>Title:</strong>
+  <%= @task.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @task.content %>
+</p>
+
+<p>
+  <strong>Deadline:</strong>
+  <%= @task.deadline.strftime("%Y/%m/d%/%H:%M")%>
+</p>
+
+<p>
+  <strong>Charge:</strong>
+  <%= @task.charge_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @task.status %>
+</p>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>
